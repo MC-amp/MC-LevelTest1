@@ -8,6 +8,7 @@ namespace LevelDesign.Gameplay.Levels
     public class LedgeController : MonoBehaviour
     {
         [Header("Ledge Guard")]
+        [SerializeField] private bool CrateLedge = false;
         [SerializeField] private float maxDropHeight = 0.6f;
         [SerializeField] private float maxSlopeAngle = 50f;
         [SerializeField] private float pushBack = 0.02f;
@@ -53,7 +54,9 @@ namespace LevelDesign.Gameplay.Levels
                 ResetObject();
                 return;
             }
- 
+            if(CrateLedge) {
+                return;
+            }
             int mask = groundMask & ~(1 << gameObject.layer);
  
             Bounds b = col.bounds; // world-space AABB, rotation-proof
