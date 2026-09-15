@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aff538ae74f81bd4ea8beb47e0b5531f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelDesign.Gameplay.Player.ProjectileBehaviour
-  speed: 25
+  speed: 5
   sphereCollider: {fileID: 3990879947212320766}
   hitMask:
     serializedVersion: 2
